@@ -1,0 +1,177 @@
+body {
+    font-family: 'Open sans';
+    background-color: #2f3848;
+    padding: 0 100px;
+}
+
+/* header */
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #f05768;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    padding-bottom: .5em;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+#main-nav li {
+    margin: 0 .5em;
+}
+
+#social-nav li {
+    margin: 0 .1em;
+}
+
+#main-nav li:first-child {
+    margin-left: 0;
+}
+
+#social-nav li:last-child {
+    margin-right: 0;
+}
+
+nav ul a {
+    color: #9acd32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#social-nav img {
+    height: 1em;
+}
+
+/* main */
+
+#presentation h2 {
+    color: #0cf;
+    font-style: italic;
+}
+
+p {
+    color: white;
+    font-size: .8em;
+    line-height: 1.3em;
+}
+
+a {
+    color: #9acd32;
+}
+
+#highlight {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#highlight h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: #f05768;
+    margin: 0;
+    padding: .5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+#highlight img {
+    width: 100%;
+}
+
+/* galerie + aside */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery {
+    width: calc(70% - 50px);
+    font-size: 0;
+    margin-right: 50px;
+}
+
+/*
+    alternative avec du padding et border-box
+
+*/
+
+#gallery img {
+    width: calc(25% - 5px);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#gallery img:first-child {
+    width: calc(50% - 5px);
+    float: left;
+}
+
+/* encart */
+
+aside {
+    align-self: flex-start;
+    width: 30%;
+    background-color: #004488;
+    padding: 24px;
+    box-sizing: border-box; /* les 30%, c'est padding inclus (et même border inclus, mais là y en a pas) */
+}
+
+aside h3 {
+    color: #0cf;
+    border-bottom: 1px solid #0cf;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+aside p {
+    color: #9acd32;
+    font-size: .7em;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 30px;
+    }
+
+    #gallery {
+        width: 100%;
+        margin-right: 0; 
+        margin-bottom: 32px; 
+    }
+
+    aside {
+        width: 100%;
+    }
+}
+
+/* pour les affichages jusqu'à 400px */
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0 5px; 
+    }
+  
+    aside {
+        display: none;
+    }
+}
